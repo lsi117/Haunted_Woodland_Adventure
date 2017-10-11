@@ -1,0 +1,132 @@
+body{
+    background-color: black;
+}
+
+
+h1{
+ font-family: 'Finger Paint', cursive;
+ font-size: 70px;
+ font-weight: lighter;
+ text-align: center;
+ color: ghostwhite;
+ margin: 0 auto;
+ padding: 25px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+button{
+    background-color: ghostwhite;
+    color: black;
+    font-family: 'Finger Paint', cursive;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 110px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.3);
+    border-radius: 5px;
+    transform: translateY(4px);
+    margin: 20px;
+}
+
+.buttonContain{
+  position: relative;
+  top: 210px;
+  margin: 20px;
+}
+
+.buttonContainSeven{
+  position: relative;
+  top: 200px;
+  margin: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button:hover{
+    background-color: yellowgreen;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0, 0.3);
+}
+
+#playerName, #save{
+    width:450px;
+    height: 30px;
+    position: relative;
+    top: 100px;
+    font-family: 'Finger Paint', cursive;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    transform: translateY(4px);
+}
+
+#playerName{
+    background-color: gainsboro; 
+}
+
+#save{
+   background-color: yellowgreen;
+   
+}
+
+#save:hover{
+   background-color:  aquamarine;
+   font-weight: bolder;
+   font-size: 20px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+p span{
+    height: auto;
+    color: ghostwhite;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Finger Paint', cursive;
+    background-color: rgba(0,0,0, 0.5);
+    width: 70%;
+    position: absolute;
+    top: 100px;
+    left:220px;
+    padding: 20px;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+
+#customFadeIn{
+    height:100%; 
+    width:100%;
+}
+
+
+#gameMessage{
+    position: relative;
+    width: 100%;
+   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#roomOne, #roomTwo, #roomThree, #roomFour, #roomFive, #roomSix, #roomSeven, #roomEight, #roomNine, #roomTen{
+    display: none;
+}
+
+
+.smallPara{
+    top: 3px;
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Haunted Woodland Adventure</title>
+        <!--author: lauren inacio-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">    
+<link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+<link type="text/css" rel="stylesheet" href="../css/styles.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+               <div id="customFadeIn">
+
+       <div id="container">
+
+        <div id="gameBanner"><h1>Haunted WoodLand Adventure</h1></div>
+        
+        <div id="gameMessage">
+        <img src="../Images/roomSix.gif" alt="A Haunted Forest" />
+        
+        <p><span id="gameStorySix"></span></p>  <!--place game story from objs-->
+
+        </div>
+        <div class='buttonContain'>
+            <button id="cabinAccess"><a href="#">Use the key to enter the cabin..</a></button> <!--button results in succession to next ROOM-->
+            <button id="noKey"><a href="#">You did NOT pick up the key, keep moving on..</a></button> <!--button results in player loss...if player has key this will trigger an alert to player-->
+            <button id='ignoreKey'><a href="#">You have the key, but decide against going into the cabin. Keep moving..</a></button> <!--button results in player loss, only if player has key then player can move, but will lose...will look to make this a different scenario in near future-->
+        </div>
+            
+       </div> <!-- end for container-->
+        </div> <!--customFadeIn end-->
+  
+                      <audio id="roomSix" src="../music/roomSix.mp3" loop="loop"></audio>  
+             <script>
+                 
+//plays audio
+$(document).ready(function() {
+    $("#roomSix").get(0).play();
+});
+             </script>  
+        
+        
+        
+        <script type="text/javascript" src="../script.js"></script>
+           <script type="text/javascript" src='../customFadeIn.js'></script>
+                      <script type="text/javascript" src='../roomSix.js'></script>
+    </body>
+</html>

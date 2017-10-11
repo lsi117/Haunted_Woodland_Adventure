@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Haunted Woodland Adventure</title>
+        <!--author: lauren inacio-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">    
+<link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+<link type="text/css" rel="stylesheet" href="../css/styles.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+               <div id="customFadeIn">
+
+       <div id="container">
+
+        <div id="gameBanner"><h1>Haunted WoodLand Adventure</h1></div>
+        
+        <div id="gameMessage">
+        <img src="../Images/roomSeven.gif" alt="A Haunted Forest" />
+        
+        <p><span id="gameStorySeven"></span></p>  <!--place game story from objs-->
+
+        </div>
+                <div class='buttonContainSeven'>
+            <button><a href="../allRooms/roomFive.html">Eat a freshly made meal, no one is here they won't mind..</a></button> <!--button results in player loss-->
+            <button><a href="../allRooms/roomTen.html">Get some rest, it should help with the persistent headache..</a></button> <!--button results in player loss-->
+            <button><a href="../allRooms/roomEight.html">Just take the map and leave..</a></button> <!--button results in player progression-->
+                </div>
+            
+            
+            
+       </div> <!-- end for container-->
+        </div> <!--customFadeIn end-->
+      
+        <audio id="roomSeven" src="../music/0031.mp3" loop="loop"></audio>  
+               <script>
+                 
+//plays audio
+$(document).ready(function() {
+    $("#roomSeven").get(0).play();
+});
+             </script>  
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="../script.js"></script>
+           <script type="text/javascript" src='../customFadeIn.js'></script>
+    </body>
+</html>

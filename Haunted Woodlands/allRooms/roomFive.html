@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Haunted Woodland Adventure</title>
+        <!--author: lauren inacio-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">    
+<link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+<link type="text/css" rel="stylesheet" href="../css/styles.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+               <div id="customFadeIn">
+
+       <div id="container">
+
+        <div id="gameBanner"><h1>Haunted WoodLand Adventure</h1></div>
+        
+        <div id="gameMessage">
+        <img src="../Images/roomFive.gif" alt="A Haunted Forest" />
+        
+        <p><span id='gameStoryFive'></span></p>  <!--place game message from objs-->
+
+        </div>
+            <button id='reset'><a href="index.html">Try Again?</a></button> <!--button will reset-->
+            
+            
+       </div> <!-- end for container-->
+        </div> <!--customFadeIn end-->
+                      
+        <audio id="roomFive" src="../music/roomFive.mp3" loop="loop"></audio>  
+             <script>
+                 
+//plays audio
+$(document).ready(function() {
+    $("#roomFive").get(0).play();
+});
+//will reset player input value when player reaches death screen and presses restart btn
+$('button#reset').on("click",function(){
+ window.localStorage.removeItem("playerUserName") && localStorage.removeItem("cabinKey");
+});
+
+
+             </script>
+        
+        
+        <script type="text/javascript" src="../script.js"></script>
+           <script type="text/javascript" src='../customFadeIn.js'></script>
+    </body>
+</html>
+

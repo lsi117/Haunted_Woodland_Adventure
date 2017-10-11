@@ -1,0 +1,36 @@
+pseudocode
+
+
+HTML
+GAME BANNER
+DIVS for text to appear
+BTNS for user to make choice
+CREATE DIV for image
+
+
+
+
+CSS
+CONTAIN all items in simple flexbox
+Simple Black background
+Three buttons/two buttons(depends on which ROOM player is in) - choices
+Create a main DIV for game TEXT to Appear
+
+
+
+
+
+
+
+
+
+JS
+MAKE an array of 4 objects that has property of different game rooms and descriptions as their values. 
+ENDED UP MAKING LIKE 10
+USE local storage to retain values that player entered 
+MAKE links to navigate to other 'Rooms'
+APPLY jQuery for animations on buttons
+ROOM one is where you start --Two BTNS where one leads to player loss and other B
+ROOM two 
+REQUIRE TEXT INPUT TO BE FILLED BEFORE BUTTONS ARE PRESSED IN FIRST PAGE!! IMPORTANT
+

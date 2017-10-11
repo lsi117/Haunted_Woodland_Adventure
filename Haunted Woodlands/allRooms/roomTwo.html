@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Haunted Woodland Adventure</title>
+        <!--author: lauren inacio-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">    
+<link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+<link type="text/css" rel="stylesheet" href="../css/styles.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+               <div id="customFadeIn">
+
+       <div id="container">
+
+        <div id="gameBanner"><h1>Haunted WoodLand Adventure</h1></div>
+        
+        <div id="gameMessage">
+        <img src="../Images/roomTwo.gif" alt="A Haunted Forest" />
+        
+        <p><span id="gameStoryTwo"></span></p>  <!--place game story from objs-->
+
+        </div>
+            <button id="keyPickUp"><a href="roomSix.html">Take the key.</a></button> <!--button results in succession to next ROOM-->
+            <button><a href="roomSix.html">Leave the key and continue on.</a></button> <!--button results in player succession to next room, but not really a  win either-->
+
+            
+            
+            
+       </div> <!-- end for container-->
+        </div> <!--customFadeIn end-->
+                  <audio id="roomTwo" src="../music/0333.mp3" loop="loop"></audio>  
+             <script>
+                 
+//plays audio
+$(document).ready(function() {
+    $("#roomTwo").get(0).play();
+});
+
+
+
+             </script>
+        
+        
+        
+        
+        <script type="text/javascript" src="../script.js"></script>
+           <script type="text/javascript" src='../customFadeIn.js'></script>
+           <script type="text/javascript" src="../theKey.js"></script>
+    </body>
+</html>
+
