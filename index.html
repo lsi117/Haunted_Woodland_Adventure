@@ -30,7 +30,7 @@
         <form name='playForm'>
             <input type='text' name='pName' maxlength="20" placeholder='Enter Your Name...and then your journey will begin..' id='playerName' required>    <!--player enters name here--> 
             <br>
-            <input type='submit' value='Submit' id='save'> <!--player submits name here stored in local and will be eliminated in ROOM THREE, ROOM FOUR, ROOM FIVE ROOM TEN -->
+            <input type='submit' value='Submit' id='save' > <!--player submits name here stored in local and will be eliminated in ROOM THREE, ROOM FOUR, ROOM FIVE ROOM TEN -->
         </form>
         
             <button><a class="goToRoomTwo" href="roomTwo.html">Pick yourself up and run away as fast as you can!!</a></button> <!--button results in succession to next ROOM-->
@@ -46,45 +46,44 @@
                 <audio id="roomOne" src="../music/0333.mp3" loop="loop"></audio>  <!--music clip-->
 
                 
-                <script>
+  <script>
                  
-            //plays audio
-            $(document).ready(function() {
-            $("#roomOne").get(0).play();
-            });
+    //plays audio
+        $(document).ready(function() {
+            $("#roomOne").get(0).play();} );
                         
-                        localStorage.removeItem("cabinKey")
+            //just in case reset btns dont work...i think its a good backup
+                localStorage.removeItem("cabinKey"); 
                         
-            //disallow enter key to be pressed
-            $('html').bind('keypress', function(e){
-                if(e.keyCode === 13){
-                return false;}
-                              });
+                  //disallow enter key to be pressed
+                    $('html').bind('keypress', function(e){
+                        if(e.keyCode === 13){
+                             return false;} } );
+
 
 //disallows characters other than numbers and alphanumeric ...doing this out of security concern(real-world scenario)
             $(document).ready(function(){
                 $('#playerName').keypress(function(key){    //take out special characters with help from website https://www.webdesignerdepot.com/2012/10/restricting-input-with-jquery/                
                     if(key.charCode < 48 || key.charCode < 57) return false;}); 
                                                                                 });
-
-                    $("a").removeAttr("href"); //removing active links until form is filled and submitted
-
-                 //setting player name..also name is removed in rm3,4,5, and 10 kill and win scenarios
-                 $('input#save').on("click",function(){
-          let playerInputVal = $('#playerName').val();
-        if(typeof(Storage) !== 'undefined'){
-              window.localStorage.setItem('playerUserName', playerInputVal);
-               document.forms["playForm"].reset(); //will reset text once inputed on text box and then hide
-                $("a.goToRoomTwo"). attr("href", 'roomTwo.html') && $("a.goToRoomFour"). attr("href", 'roomFour.html'); //giving back links once submission form is FILLED AND SUBMITTED
-          }   
-           });
+                         //removing active links until form is filled and submitted
+                        $("a").removeAttr("href"); 
+                        
+                             //setting player name..also name is removed in rm3,4,5, and 10 kill and win scenarios(rm 3 is win)
+                               $('input#save').on("click",function(){
+                                   let playerInputVal = $('#playerName').val();
+                                         if(typeof(Storage) !== 'undefined'){
+                                           window.localStorage.setItem('playerUserName', playerInputVal);
+                                           alert(`${playerInputVal}...what a great name`); //will let player know their name is inputed
+                                               document.forms["playForm"].reset(); //will reset text once inputed on text box and then hide
+                                                    $("a.goToRoomTwo"). attr("href", 'roomTwo.html') && $("a.goToRoomFour"). attr("href", 'roomFour.html');}}); //giving back links once submission form is FILLED AND SUBMITTED  
            
-           $('input#save').submit(function () {
- saveThePlayerName();    //got help for submission form not to refresh pg here: https://stackoverflow.com/questions/1263852/prevent-form-redirect-or-refresh-on-submit
- return false;
-});
+           
+                                                       $('input#save').submit(function(){
+                                                            saveThePlayerName();    //got help for submission form not to refresh pg here: https://stackoverflow.com/questions/1263852/prevent-form-redirect-or-refresh-on-submit
+                                                                return false;});
 
-           </script>
+       </script>
 
            
         <script type="text/javascript" src="../script.js"></script>
