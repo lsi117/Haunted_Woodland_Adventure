@@ -1,4 +1,4 @@
-# Haunted_Woodland_Adventure 
+# Haunted Woodland Adventure 
 
 ![alternateText](https://media.giphy.com/media/HCew9PRerCcq4/giphy.gif)
 
